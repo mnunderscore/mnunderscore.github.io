@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap");
+
+body {
+    display: flex;
+    background-color: #0c0f0a;
+    color: #0c0f0a;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    $self: &;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #c2d076;
+    box-shadow: 0px 0px 15px #c2d076;
+    border-radius: 25px;
+
+    &__top-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+
+        #{ $self }__title {
+            font-size: 24px;
+            font-weight: 800;
+            text-decoration: none;
+            color: inherit;
+            cursor: default;
+            margin-top: 20px;
+            font-family: "Syne", sans-serif;
+        }
+
+        #{ $self }__subtitle {
+            margin: 0;
+            margin-top: 20px;
+        }
+
+        svg {
+            width: 80%;
+        }
+    }
+
+    &__icons-links {
+        margin-top: 25px;
+
+        #{ $self }__link {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s cubic-bezier(0.65, 0, 0.35, 1);
+
+            .fab {
+                font-size: 200%;
+            }
+
+            &:not(:last-child) {
+                margin-right: 20px;
+            }
+
+            &:hover {
+                color: #ff206e;
+                transition: color 0.2s cubic-bezier(0.65, 0, 0.35, 1);
+            }
+        }
+    }
+
+    &__footer {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .box {
+        $self: &;
+        width: 90%;
+
+        &__top-text {
+            #{ $self }__title {
+                font-size: 20px;
+            }
+        }
+    }
+}
