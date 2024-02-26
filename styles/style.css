@@ -59,15 +59,17 @@ body {
 .box__icons-links .box__link .fab {
   font-size: 200%;
 }
-.box__icons-links .box__link:not(:last-child) {
+.box__icons-links .box__link:not(:nth-child(4)) {
   margin-right: 20px;
 }
 .box__icons-links .box__link:hover {
   color: #ff206e;
   transition: color 0.2s cubic-bezier(0.65, 0, 0.35, 1);
 }
-.box__footer {
+.box__icons-links .box__footer {
   margin: 0;
+  text-align: center;
+  margin-top: 20px;
 }
 
 @media only screen and (max-width: 480px) {
